@@ -1,0 +1,138 @@
+<!-- Shut up, I know it has a lot of comments. -->
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Blooket</title>
+		<link rel="stylesheet" href="/css/base.css">
+		<link rel="stylesheet" href="/css/blooket.css">
+		<script defer src="/js/blooket.js"></script>
+
+		<!-- Primary Meta Tags -->
+		<meta name="title" content="Blooket">
+		<meta name="description" content="A collection of Blooket cheats that abuse the poorly designed api.">
+
+		<!-- Open Graph / Facebook -->
+		<meta property="og:type" content="website">
+		<meta property="og:url" content="https://gbasil.dev/blooket">
+		<meta property="og:title" content="Blooket">
+		<meta property="og:description" content="A collection of Blooket cheats that abuse the poorly designed api.">
+		<meta property="og:image" content="https://gbasil.dev/img/banner.png">
+
+		<!-- Twitter -->
+		<meta property="twitter:card" content="summary_large_image">
+		<meta property="twitter:url" content="https://gbasil.dev/blooket">
+		<meta property="twitter:title" content="Blooket">
+		<meta property="twitter:description" content="A collection of Blooket cheats that abuse the poorly designed api.">
+		<meta property="twitter:image" content="https://gbasil.dev/img/banner.png">
+
+		<!-- Discord -->
+		<meta name="theme-color" content="#75E04B">
+	</head>
+	<body>
+		<div class="header">
+			/<a href="/">home</a>/blooket
+			<a id="version" style="float:right;color:var(--fg-darker);"></a>
+
+			<hr>
+		</div>
+
+		<div class="content" id="content">
+
+			<div class="warning">
+				<h1>Hiya!</h1>
+				<p>
+					<!-- So a bunch of people think it's ok to steal the work of others and call it their own.
+					If you paid for this, please report the server to Basil#1337 and join the
+					<a href="https://rocks.network/discord">Rocks Network Discord server</a>. All of our
+					stuff is free, and always will be. The original cheat is on gbasil.dev, my portfolio
+					website. -->
+
+					<!-- If you like what I do, consider <a href="/donate">donating</a>, it would mean a lot!
+					Not many people donate, but I will list each and every donator on the donation page. -->
+
+					<!-- Hey all! I want to monetize this, but ads are last-resort only. If you want to advertise
+					something here, please read more about it at <a href="/ads">/ads</a> -->
+				</p>
+	
+				<!-- <button id="scam">I get it, gimme the cheat</button> -->
+			</div>
+
+			<h3><i>*</i> = auth required</h3>
+
+			<div class="main">
+				<h2>Bookmarklets</h2>
+				<ul>
+					<li>
+						<a href="javascript:if (localStorage.token == undefined) {alert('Please log in!')} else {window.open('https://gbasil.dev/blooket?token=' + localStorage.token)}">Autofill Token</a>
+						 <!-- - <a href="workflow://shortcuts/5b6c6c5f1daf4a7f99a7cf31706fd8e0">iOS Shortcut</a> -->
+						<p>Run on Blooket.com while logged in</p>
+					</li>
+					<li>
+						<a href="javascript:fetch('https://www.gbasil.dev/api/blooket/bookmarklet').then(res => res.text().then(t => eval(t)))">Auto Answer</a>
+						 <!-- - <a href="workflow://shortcuts/463258412ee34b4ca7ba70fec9b28bd8">iOS Shortcut</a> -->
+						<p>Answer questions correctly at the click of a button</p>
+					</li>
+					<li>
+						<a href="javascript:fetch('https://www.gbasil.dev/api/blooket/bookmarkletv2').then(res => res.text().then(t => eval(t)))">Multitool (Beta)</a>
+						<p>Many utilities for specific gamemodes</p>
+					</li>
+				</ul>
+				
+				<h2>Account manipulation</h2>
+
+				<h3>Daily money & xp<i>*</i></h3>
+				<p>(You can earn up to a maximum of 500 coins and 300 tokens a day)</p>
+				<input type="text" id="moneyToken" placeholder="Token (JWT blahblah)">
+				<button id="moneyClick">Add to account</button>
+
+				<!-- <h2>Game manipulation</h2>
+				<h3>Flood blooket</h3>
+				<input type="number" id="floodPin" placeholder="Pin">
+				<input type="text" id="floodName" placeholder="Name">
+				<input type="number" id="floodAmount" placeholder="Amount">
+				<button id="floodClick">Flood</button>
+
+				<h3>Kick player</h3>
+				<input type="number" id="kickPin" placeholder="Pin">
+				<input type="text" id="kickName" placeholder="Name">
+				<button id="kickClick">Kick</button>
+				<button id="kickEveryoneClick">Kick <i>Everyone</i></button>
+				
+				<h3>End Game</h3>
+				<input type="number" id="endPin" placeholder="Pin">
+				<button id="endClick">End Game</button> -->
+				
+
+				<h2>Answers</h2>
+				<h3>Get Answers from pin</h3>
+				<input type="number" id="answersPin" placeholder="Pin">
+				<button id="answersClick">Get Answers</button>
+
+				<h3>Get Answers from homework</h3>
+				<input type="text" id="homeworkLink" placeholder="Homework link/id">
+				<button id="homeworkClick">Get Answers</button>
+				
+				<div id="answers"></div>
+
+				<!-- <h2>Misc</h2>
+				<h3>Spam favorite</h3>
+				<input type="text" id="favoriteLink" placeholder="Game link/id">
+				<input type="number" id="favoriteAmount" placeholder="Amount">
+				<button id="favoriteClick">Send requests</button>
+				<h3>Spam report</h3>
+				<input type="text" id="reportLink" placeholder="Game link/id">
+				<input type="number" id="reportAmount" placeholder="Amount">
+				<button id="reportClick">Send requests</button>
+				<h3>Spam play</h3>
+				<input type="text" id="playLink" placeholder="Game link/id">
+				<input type="number" id="playAmount" placeholder="Amount">
+				<button id="playClick">Send requests</button> -->
+				
+
+				<h3>Credits</h3>
+				<p>Varedz - Providing a proxy & helping with bookmarklet</p>
+				<p>Glizzy - Sharing multiple methods</p>
+			</div>
+		</div>
+	</body>
+</html>
