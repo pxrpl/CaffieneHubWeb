@@ -1,0 +1,214 @@
+/* Variables and font initiation */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap');
+
+:root {
+	/* --bg: #1b1b1b;
+	--fg: #d4d4d4;
+
+	--bg-lighter: #313131;
+	--accent: #54d02b; 
+	
+	--fg-darker: #a1a1a1; */
+	--bg: #190e28;
+	--fg: #d4d4d4;
+	--bg-lighter: #2b1c40;
+	--accent: #f77117;
+	--fg-darker: #a1a1a1;
+
+	--item-hover: color 0.2s ease, fill 0.2s ease;
+}
+
+/* Special thingies */
+::-webkit-scrollbar {
+	width: 10px;height: 10px;
+	background-color: #2e2e2e;
+}
+
+::-webkit-scrollbar-thumb { background: #555555; }
+::-webkit-scrollbar-thumb:hover { background: #636363; }
+::-webkit-scrollbar-thumb:active { background: var(--accent); }
+
+::-webkit-scrollbar-corner { background: #2e2e2e; }
+
+::selection {
+	background: var(--accent);
+}
+
+* {
+	scrollbar-width: thin;
+	scrollbar-color: #555555 transparent;
+}
+
+
+/* range input (Lordy is this annoying) */
+/* base range input background */
+input[type=range] {
+	-webkit-appearance: none;
+	vertical-align: bottom;
+	width: 150px; height: 36px;
+	padding: 0 10px; margin: 0;
+	background: var(--bg-lighter);
+}
+/* The thumbs are the dots, the part of the slider you move. This one is for firefox */
+input[type=range]::-moz-range-thumb {
+	-webkit-appearance: none;
+	height: 10px; width: 10px;
+	background: var(--fg);
+	border: 2px solid transparent;
+}
+/* This one is for webkit, which is Chrome and I presume Safari */
+input[type=range]::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	height: 15px; width: 15px;
+	/* background: var(--fg); */
+	/* Absolutely terrific, the comment above doesn't work so I have to do this ._. - 826nN0_BsHA */
+	background: linear-gradient(0deg, var(--fg) 0%, var(--fg) 100%);
+	border-radius: 15px;
+}
+/* Either Internet Explorer-chan or Edge, I don't care enough to test */
+input[type=range]::-ms-thumb {
+	-webkit-appearance: none;
+	height: 10px; width: 10px;
+	background: var(--fg);
+	border: 2px solid transparent;
+}
+
+/* color picker */
+input[type="color"] {
+	visibility: hidden;
+}
+.picker {
+	position: relative;
+	background: var(--bg-lighter);
+	/* height: 36px; */
+	width: 75px;
+	padding: 4.5px;
+	border-radius: 4px;
+	display: inline-block;
+	vertical-align: bottom;
+}
+.picker a {
+	position: absolute;
+}
+
+body {
+	background: var(--bg);
+	color: var(--fg);
+
+	font-family: 'Roboto Mono', monospace;
+	/* font-weight: 200; */
+	font-size: 18px;
+}
+
+body > div {
+	width: 80%;
+	margin: auto;
+}
+
+div.header > a {
+	text-decoration: none;
+}
+
+/* Top Bar */
+div.header {
+	margin-left: 10%;
+}
+
+div.header a {
+	color: var(--accent);
+}
+
+div.header svg {
+    position: relative;
+	top: 2px;
+}
+div.header path {
+	fill: var(--accent);
+}
+
+div.header p {
+	margin-top: 0;
+	margin-bottom: 10px;
+
+	color: var(--fg-darker)
+}
+
+/* Header */
+h1.header {
+	margin-bottom: 0;
+}
+h3.header {
+    margin: 0;
+}
+
+/* Individual elements */
+
+h1 {font-size: 60px;}
+
+a {color: var(--accent);}
+a:not([href]) {color: white;}
+
+input, button, option, select, textarea {font-family: 'Roboto Mono', monospace;}
+
+/* form elements */
+:is(input, select, button, .file, textarea) {
+	border: none;
+	padding: 10px;
+	border-radius: 4px;
+	outline: none;
+
+	font-size: 14px;
+	
+	transition: background 0.3s ease;
+
+	background: var(--bg-lighter);
+	color: var(--fg);
+}
+
+select, button, .file {cursor: pointer;}
+
+:is(input, select, textarea):focus, :is(button, .file):active {background: #4d4d4d;}
+
+textarea {
+	resize: none;
+	height: 100px;
+}
+
+input[type="file"] {display: none;}
+
+div.currency {
+	display: inline-block;
+	padding: 10px;
+	border-radius: 5px;
+	
+	background: var(--bg-lighter);
+}
+
+.finetext {
+	font-size: 13px;
+	color: var(--fg-darker);
+}
+
+.hidden {display: none;}
+
+/*! Blog elements */
+
+/* Quotes */
+blockquote {
+	border-left: 3px solid var(--accent);
+	padding-left: 1rem;
+}
+
+/* Code */
+pre {
+	padding: 10px;
+	border-radius: 10px;
+	
+	background: var(--bg-lighter);
+}
+
+/* Headers */
+div.content h2 {
+	font-size: 40px;
+}
